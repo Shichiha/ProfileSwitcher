@@ -117,16 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ProfileList.Alignment" type="System.Windows.Forms.ListViewAlignment, System.Windows.Forms">
+    <value>SnapToGrid</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ProfileList.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 6</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ProfileList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
   <data name="ProfileList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 279</value>
+    <value>345, 383</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ProfileList.TabIndex" type="System.Int32, mscorlib">
@@ -142,7 +145,7 @@
     <value>MainPage</value>
   </data>
   <data name="&gt;&gt;ProfileList.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="SaveButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -151,7 +154,7 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="SaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 57</value>
+    <value>382, 54</value>
   </data>
   <data name="SaveButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 6, 4, 6</value>
@@ -175,7 +178,7 @@
     <value>MainPage</value>
   </data>
   <data name="&gt;&gt;SaveButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="LoadButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -184,7 +187,7 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="LoadButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 9</value>
+    <value>376, 6</value>
   </data>
   <data name="LoadButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 6, 4, 6</value>
@@ -208,16 +211,76 @@
     <value>MainPage</value>
   </data>
   <data name="&gt;&gt;LoadButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="profileCount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="profileCount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 11pt</value>
+  </data>
+  <data name="profileCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>356, 351</value>
+  </data>
+  <data name="profileCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 19</value>
+  </data>
+  <data name="profileCount.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="profileCount.Text" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="&gt;&gt;profileCount.Name" xml:space="preserve">
+    <value>profileCount</value>
+  </data>
+  <data name="&gt;&gt;profileCount.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialLabel, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;profileCount.Parent" xml:space="preserve">
+    <value>MainPage</value>
+  </data>
+  <data name="&gt;&gt;profileCount.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="versionCount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="versionCount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 11pt</value>
+  </data>
+  <data name="versionCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>356, 370</value>
+  </data>
+  <data name="versionCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 19</value>
+  </data>
+  <data name="versionCount.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="versionCount.Text" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="&gt;&gt;versionCount.Name" xml:space="preserve">
+    <value>versionCount</value>
+  </data>
+  <data name="&gt;&gt;versionCount.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialLabel, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;versionCount.Parent" xml:space="preserve">
+    <value>MainPage</value>
+  </data>
+  <data name="&gt;&gt;versionCount.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="MainPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 30</value>
+    <value>4, 23</value>
   </data>
   <data name="MainPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="MainPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 308</value>
+    <value>556, 395</value>
   </data>
   <data name="MainPage.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -244,7 +307,7 @@
     <value>Roboto, 11pt</value>
   </data>
   <data name="Notification1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 126</value>
+    <value>196, 90</value>
   </data>
   <data name="Notification1.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 19</value>
@@ -277,7 +340,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="SettingsPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 315</value>
+    <value>556, 395</value>
   </data>
   <data name="SettingsPage.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -297,11 +360,110 @@
   <data name="&gt;&gt;SettingsPage.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="BinaryData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 171</value>
+  </data>
+  <data name="BinaryData.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="BinaryData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>527, 207</value>
+  </data>
+  <data name="BinaryData.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="BinaryData.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;BinaryData.Name" xml:space="preserve">
+    <value>BinaryData</value>
+  </data>
+  <data name="&gt;&gt;BinaryData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BinaryData.Parent" xml:space="preserve">
+    <value>AdViewPage</value>
+  </data>
+  <data name="&gt;&gt;BinaryData.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="materialDivider1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 161</value>
+  </data>
+  <data name="materialDivider1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>556, 234</value>
+  </data>
+  <data name="materialDivider1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="materialDivider1.Text" xml:space="preserve">
+    <value>materialDivider1</value>
+  </data>
+  <data name="&gt;&gt;materialDivider1.Name" xml:space="preserve">
+    <value>materialDivider1</value>
+  </data>
+  <data name="&gt;&gt;materialDivider1.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialDivider, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialDivider1.Parent" xml:space="preserve">
+    <value>AdViewPage</value>
+  </data>
+  <data name="&gt;&gt;materialDivider1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RegistryList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 6</value>
+  </data>
+  <data name="RegistryList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="RegistryList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>548, 149</value>
+  </data>
+  <data name="RegistryList.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RegistryList.Name" xml:space="preserve">
+    <value>RegistryList</value>
+  </data>
+  <data name="&gt;&gt;RegistryList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RegistryList.Parent" xml:space="preserve">
+    <value>AdViewPage</value>
+  </data>
+  <data name="&gt;&gt;RegistryList.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="AdViewPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 23</value>
+  </data>
+  <data name="AdViewPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>556, 395</value>
+  </data>
+  <data name="AdViewPage.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="AdViewPage.Text" xml:space="preserve">
+    <value>Advanced View</value>
+  </data>
+  <data name="&gt;&gt;AdViewPage.Name" xml:space="preserve">
+    <value>AdViewPage</value>
+  </data>
+  <data name="&gt;&gt;AdViewPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdViewPage.Parent" xml:space="preserve">
+    <value>TabControl</value>
+  </data>
+  <data name="&gt;&gt;AdViewPage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="TabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 90</value>
+    <value>12, 90</value>
   </data>
   <data name="TabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>421, 342</value>
+    <value>564, 422</value>
   </data>
   <data name="TabControl.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -318,11 +480,14 @@
   <data name="&gt;&gt;TabControl.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="TabSelector.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="TabSelector.Location" type="System.Drawing.Point, System.Drawing">
     <value>-5, 59</value>
   </data>
   <data name="TabSelector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 25</value>
+    <value>595, 25</value>
   </data>
   <data name="TabSelector.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -349,7 +514,7 @@
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>426, 432</value>
+    <value>588, 524</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono NL, 8.249999pt</value>
@@ -3419,7 +3584,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Genshin Account Switcher</value>
+    <value>Profile Switcher</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Switcher</value>
