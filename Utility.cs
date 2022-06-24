@@ -85,7 +85,7 @@ namespace ProfileSwitcher
                 return;
             }
             SetStringToRegedit("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810", MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810);
-            MessageBox.Show($"Loaded Account [{MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810}]", "Account Manager", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"Loaded Account [{Name}]", "Account Manager", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         // Process Utility
