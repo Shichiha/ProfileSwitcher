@@ -122,6 +122,9 @@
     <value>SnapToGrid</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ProfileList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>JetBrains Mono NL SemiBold, 20.25pt, style=Bold</value>
+  </data>
   <data name="ProfileList.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 6</value>
   </data>

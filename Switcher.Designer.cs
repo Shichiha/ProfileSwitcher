@@ -33,6 +33,8 @@
             this.LoadButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.TabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.MainPage = new System.Windows.Forms.TabPage();
+            this.profileCount = new MaterialSkin.Controls.MaterialLabel();
+            this.versionCount = new MaterialSkin.Controls.MaterialLabel();
             this.SettingsPage = new System.Windows.Forms.TabPage();
             this.Notification1 = new MaterialSkin.Controls.MaterialLabel();
             this.AdViewPage = new System.Windows.Forms.TabPage();
@@ -40,8 +42,6 @@
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.RegistryList = new System.Windows.Forms.ListView();
             this.TabSelector = new MaterialSkin.Controls.MaterialTabSelector();
-            this.versionCount = new MaterialSkin.Controls.MaterialLabel();
-            this.profileCount = new MaterialSkin.Controls.MaterialLabel();
             this.TabControl.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.SettingsPage.SuspendLayout();
@@ -101,6 +101,22 @@
             resources.ApplyResources(this.MainPage, "MainPage");
             this.MainPage.Name = "MainPage";
             this.MainPage.UseVisualStyleBackColor = true;
+            // 
+            // profileCount
+            // 
+            resources.ApplyResources(this.profileCount, "profileCount");
+            this.profileCount.Depth = 0;
+            this.profileCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.profileCount.MouseState = MaterialSkin.MouseState.HOVER;
+            this.profileCount.Name = "profileCount";
+            // 
+            // versionCount
+            // 
+            resources.ApplyResources(this.versionCount, "versionCount");
+            this.versionCount.Depth = 0;
+            this.versionCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.versionCount.MouseState = MaterialSkin.MouseState.HOVER;
+            this.versionCount.Name = "versionCount";
             // 
             // SettingsPage
             // 
@@ -162,22 +178,6 @@
             this.TabSelector.MouseState = MaterialSkin.MouseState.HOVER;
             this.TabSelector.Name = "TabSelector";
             this.TabSelector.Click += new System.EventHandler(this.TabSelector_Click);
-            // 
-            // versionCount
-            // 
-            resources.ApplyResources(this.versionCount, "versionCount");
-            this.versionCount.Depth = 0;
-            this.versionCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.versionCount.MouseState = MaterialSkin.MouseState.HOVER;
-            this.versionCount.Name = "versionCount";
-            // 
-            // profileCount
-            // 
-            resources.ApplyResources(this.profileCount, "profileCount");
-            this.profileCount.Depth = 0;
-            this.profileCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.profileCount.MouseState = MaterialSkin.MouseState.HOVER;
-            this.profileCount.Name = "profileCount";
             // 
             // Switcher
             // 

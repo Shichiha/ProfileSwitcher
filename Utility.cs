@@ -12,18 +12,90 @@ namespace ProfileSwitcher
 {
     public class Utility
     {
-        // Utility Things
-        public string Log(string format, params object[] args)
-        {
-            return string.Format(format, args);
-        }
-
-        // userdata path
+        // UserData Path
         private static string userDataPath = Path.Combine(Application.StartupPath, "UserData");
         public static string Name { get; set; }
         public string MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810 { get; set; }
         public static string UserDataPath { get => userDataPath; set => userDataPath = value; }
         public static string genshinRegPath = "HKEY_CURRENT_USER\\Software\\miHoYo\\Genshin Impact";
+
+        public string GetUserDataPath() => userDataPath;
+
+        public static void InitializeDirectory(string userDataPath)
+        {
+            if (!Directory.Exists(userDataPath))
+                Directory.CreateDirectory(userDataPath);
+        }
+
+        public static void LoadDirectory(ListView listView)
+        {
+            if (Directory.Exists(userDataPath))
+            {
+                foreach (string file in Directory.GetFiles(userDataPath))
+                {
+                    listView.Items.Add(Path.GetFileName(file), 0);
+                }
+            }
+        }
+
+        // Registries
+        public static string GetStringFromRegedit(string key, bool str_ = true)
+        {
+            var value = Registry.GetValue(genshinRegPath, key, "");
+            if (value == null)
+                return null;
+            if (value.GetType() == typeof(byte[]) || !str_)
+                return Encoding.UTF8.GetString((byte[])value);
+            return value.ToString();
+        }
+
+        private static void SetStringToRegedit(string key, string value)
+        {
+            Registry.SetValue(genshinRegPath, key, Encoding.UTF8.GetBytes(value));
+        }
+
+        public static Array GetKeyArray()
+        {
+            RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\miHoYo\\Genshin Impact");
+            return key.GetValueNames();
+        }
+
+        public static void ArrayToList(ListView list, Array array)
+        {
+            foreach (string item in array)
+            {
+                list.Items.Add(item, 0);
+            }
+        }
+        
+        // Load Utility
+        public static Utility ReadFromRegedit()
+        {
+            return new Utility
+            {
+                MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810 = Utility.GetStringFromRegedit("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810", false)
+            };
+        }
+
+        public void WriteToRegedit()
+        {
+            if (string.IsNullOrWhiteSpace(MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810))
+            {
+                MessageBox.Show("Account not found", "Account Manager", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return;
+            }
+            SetStringToRegedit("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810", MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810);
+            MessageBox.Show($"Loaded Account [{MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810}]", "Account Manager", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        // Process Utility
+        public static bool YuanShenIsRunning()
+        {
+            foreach (Process p in Process.GetProcessesByName("Yuanshen"))
+                if (p.MainWindowTitle == "Genshin Impact")
+                    return true;
+            return false;
+        }
 
         // Disk
         public static Utility ReadFromDisk(string name)
@@ -33,7 +105,13 @@ namespace ProfileSwitcher
         }
 
         public static void WriteToDisk()
-        { File.WriteAllText(Path.Combine(Application.StartupPath, "UserData", Name), new JavaScriptSerializer().Serialize(new Utility())); }
+        {
+            string output = new JavaScriptSerializer().Serialize(ReadFromRegedit());
+            File.WriteAllText(
+                Path.Combine(Application.StartupPath, "UserData", Name),
+                output
+            );
+        }
 
         public static void DeleteFromDisk(string name)
         { File.Delete(Path.Combine(Application.StartupPath, "UserData", name)); }
@@ -45,7 +123,7 @@ namespace ProfileSwitcher
             if (text.Length > 20)
                 return false;
             if (Regex.IsMatch(text, @"[<>:""/\\|?*]"))
-               return false;
+                return false;
             var reservedNames = new string[]
             {
                 "con",
@@ -76,88 +154,16 @@ namespace ProfileSwitcher
             return true;
         }
 
-        public string GetUserDataPath() => userDataPath;
-
-        public static void InitializeDirectory(string userDataPath)
-        {
-            if (!Directory.Exists(userDataPath))
-                Directory.CreateDirectory(userDataPath);
-        }
-
-        public static void LoadDirectory(ListView listView)
+        public static void RefreshList(ListView list)
         {
             if (Directory.Exists(userDataPath))
             {
+                list.Items.Clear();
                 foreach (string file in Directory.GetFiles(userDataPath))
                 {
-                    listView.Items.Add(Path.GetFileName(file), 0);
+                    list.Items.Add(Path.GetFileName(file), 0);
                 }
             }
         }
-
-        // Registries
-        public static string GetStringFromRegedit(string key)
-        {
-            // WTF is a System.Byte[]?????????
-            var value = Registry.GetValue(genshinRegPath, key, "");
-            if (value == null)
-                return null;
-            if (value.GetType() == typeof(byte[]))
-                return Encoding.UTF8.GetString((byte[])value);
-            return value.ToString();
-        }
-
-        private static void SetStringToRegedit(string key, string value)
-        {
-            Registry.SetValue(genshinRegPath, key, Encoding.UTF8.GetBytes(value));
-        }
-
-        public static Array GetKeyArray()
-        {
-            RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\miHoYo\\Genshin Impact");
-            return key.GetValueNames();
-        }
-
-        public static void ArrayToList(ListView list, Array array)
-        {
-            foreach (string item in array)
-            {
-                list.Items.Add(item, 0);
-            }
-        }
-        
-        // Load Utility
-        public static Utility ReadFromRegedit()
-        {
-            return new Utility
-            {MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810 = Utility.GetStringFromRegedit("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810")};
-        }
-
-        public void WriteToRegedit()
-        {
-            if (string.IsNullOrWhiteSpace(this.MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810))
-            {
-                MessageBox.Show("Account not found", "Account Manager", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                return;
-            }
-            SetStringToRegedit("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810", this.MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810);
-            MessageBox.Show(this.Log("Switched to account [{0}]", Name), "Account Manager", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-        }
-
-        // Process Utility
-        public static bool YuanShenIsRunning()
-        {
-            foreach (Process p in Process.GetProcessesByName("Yuanshen"))
-                if (p.MainWindowTitle == "Genshin Impact")
-                    return true;
-            return false;
-        }
-
-        // String Format Utility
-        public static string format(string format, params object[] args)
-        {
-            return string.Format(format, args);
-        }
-
     }
 }

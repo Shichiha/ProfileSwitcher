@@ -19,7 +19,7 @@ namespace ProfileSwitcher
             Utility.LoadDirectory(ProfileList);
 
             versionCount.Text = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            profileCount.Text = Utility.format("{0} Profile/s Loaded.", ProfileList.Items.Count.ToString());
+            profileCount.Text = $"{ProfileList.Items.Count} Profile/s Loaded.";
         }
 
         private void Switcher_Load(object sender, EventArgs e) { }
@@ -31,11 +31,11 @@ namespace ProfileSwitcher
             if_.ShowDialog();
             if (Utility.IsValid(if_.Text_()))
             {
-                Utility YSAccount = Utility.ReadFromRegedit();
                 Utility.Name = if_.Text_();
                 Utility.WriteToDisk();
             }
             else MessageBox.Show("Invalid Text");
+            Utility.RefreshList(ProfileList);
         }
             
         
