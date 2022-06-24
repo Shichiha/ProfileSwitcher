@@ -42,6 +42,9 @@
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.RegistryList = new System.Windows.Forms.ListView();
             this.TabSelector = new MaterialSkin.Controls.MaterialTabSelector();
+            this.DeleteButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.RenameButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.OpenFolderButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.TabControl.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.SettingsPage.SuspendLayout();
@@ -93,6 +96,9 @@
             // 
             // MainPage
             // 
+            this.MainPage.Controls.Add(this.OpenFolderButton);
+            this.MainPage.Controls.Add(this.RenameButton);
+            this.MainPage.Controls.Add(this.DeleteButton);
             this.MainPage.Controls.Add(this.profileCount);
             this.MainPage.Controls.Add(this.versionCount);
             this.MainPage.Controls.Add(this.LoadButton);
@@ -179,6 +185,36 @@
             this.TabSelector.Name = "TabSelector";
             this.TabSelector.Click += new System.EventHandler(this.TabSelector_Click);
             // 
+            // DeleteButton
+            // 
+            resources.ApplyResources(this.DeleteButton, "DeleteButton");
+            this.DeleteButton.Depth = 0;
+            this.DeleteButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Primary = false;
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
+            // RenameButton
+            // 
+            resources.ApplyResources(this.RenameButton, "RenameButton");
+            this.RenameButton.Depth = 0;
+            this.RenameButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RenameButton.Name = "RenameButton";
+            this.RenameButton.Primary = false;
+            this.RenameButton.UseVisualStyleBackColor = true;
+            this.RenameButton.Click += new System.EventHandler(this.RenameButton_Click);
+            // 
+            // OpenFolderButton
+            // 
+            resources.ApplyResources(this.OpenFolderButton, "OpenFolderButton");
+            this.OpenFolderButton.Depth = 0;
+            this.OpenFolderButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.OpenFolderButton.Name = "OpenFolderButton";
+            this.OpenFolderButton.Primary = false;
+            this.OpenFolderButton.UseVisualStyleBackColor = true;
+            this.OpenFolderButton.Click += new System.EventHandler(this.OpenFolderButton_Click);
+            // 
             // Switcher
             // 
             resources.ApplyResources(this, "$this");
@@ -218,6 +254,9 @@
         private System.Windows.Forms.RichTextBox BinaryData;
         private MaterialSkin.Controls.MaterialLabel versionCount;
         private MaterialSkin.Controls.MaterialLabel profileCount;
+        private MaterialSkin.Controls.MaterialFlatButton DeleteButton;
+        private MaterialSkin.Controls.MaterialFlatButton RenameButton;
+        private MaterialSkin.Controls.MaterialFlatButton OpenFolderButton;
     }
 }
 

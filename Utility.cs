@@ -116,6 +116,14 @@ namespace ProfileSwitcher
         public static void DeleteFromDisk(string name)
         { File.Delete(Path.Combine(Application.StartupPath, "UserData", name)); }
 
+        public static void RenameFromDisk(string name, string NewName)
+        {
+            File.Move(
+                Path.Combine(Application.StartupPath, "UserData", name),
+                Path.Combine(Application.StartupPath, "UserData", NewName)
+            );
+        }
+
         public static bool IsValid(string text)
         {
             if (string.IsNullOrWhiteSpace(text))

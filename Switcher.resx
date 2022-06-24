@@ -148,7 +148,7 @@
     <value>MainPage</value>
   </data>
   <data name="&gt;&gt;ProfileList.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="SaveButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -157,7 +157,7 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="SaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>382, 54</value>
+    <value>382, 9</value>
   </data>
   <data name="SaveButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 6, 4, 6</value>
@@ -181,7 +181,7 @@
     <value>MainPage</value>
   </data>
   <data name="&gt;&gt;SaveButton.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="LoadButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -190,7 +190,7 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="LoadButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>376, 6</value>
+    <value>376, 57</value>
   </data>
   <data name="LoadButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 6, 4, 6</value>
@@ -214,6 +214,114 @@
     <value>MainPage</value>
   </data>
   <data name="&gt;&gt;LoadButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="OpenFolderButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="OpenFolderButton.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="OpenFolderButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="OpenFolderButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 309</value>
+  </data>
+  <data name="OpenFolderButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 6, 4, 6</value>
+  </data>
+  <data name="OpenFolderButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 36</value>
+  </data>
+  <data name="OpenFolderButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="OpenFolderButton.Text" xml:space="preserve">
+    <value>Open UserData Folder</value>
+  </data>
+  <data name="&gt;&gt;OpenFolderButton.Name" xml:space="preserve">
+    <value>OpenFolderButton</value>
+  </data>
+  <data name="&gt;&gt;OpenFolderButton.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialFlatButton, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;OpenFolderButton.Parent" xml:space="preserve">
+    <value>MainPage</value>
+  </data>
+  <data name="&gt;&gt;OpenFolderButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RenameButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RenameButton.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="RenameButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RenameButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>356, 153</value>
+  </data>
+  <data name="RenameButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 6, 4, 6</value>
+  </data>
+  <data name="RenameButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 36</value>
+  </data>
+  <data name="RenameButton.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="RenameButton.Text" xml:space="preserve">
+    <value>Rename Selected Profile</value>
+  </data>
+  <data name="&gt;&gt;RenameButton.Name" xml:space="preserve">
+    <value>RenameButton</value>
+  </data>
+  <data name="&gt;&gt;RenameButton.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialFlatButton, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;RenameButton.Parent" xml:space="preserve">
+    <value>MainPage</value>
+  </data>
+  <data name="&gt;&gt;RenameButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="DeleteButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DeleteButton.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="DeleteButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="DeleteButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>363, 105</value>
+  </data>
+  <data name="DeleteButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 6, 4, 6</value>
+  </data>
+  <data name="DeleteButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 36</value>
+  </data>
+  <data name="DeleteButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="DeleteButton.Text" xml:space="preserve">
+    <value>Delete Selected Profile</value>
+  </data>
+  <data name="&gt;&gt;DeleteButton.Name" xml:space="preserve">
+    <value>DeleteButton</value>
+  </data>
+  <data name="&gt;&gt;DeleteButton.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialFlatButton, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;DeleteButton.Parent" xml:space="preserve">
+    <value>MainPage</value>
+  </data>
+  <data name="&gt;&gt;DeleteButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="profileCount.AutoSize" type="System.Boolean, mscorlib">
@@ -244,7 +352,7 @@
     <value>MainPage</value>
   </data>
   <data name="&gt;&gt;profileCount.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="versionCount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -274,7 +382,7 @@
     <value>MainPage</value>
   </data>
   <data name="&gt;&gt;versionCount.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="MainPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 23</value>
@@ -302,24 +410,6 @@
   </data>
   <data name="&gt;&gt;MainPage.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="Notification1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Notification1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Roboto, 11pt</value>
-  </data>
-  <data name="Notification1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 90</value>
-  </data>
-  <data name="Notification1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 19</value>
-  </data>
-  <data name="Notification1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Notification1.Text" xml:space="preserve">
-    <value>This page is empty ;)</value>
   </data>
   <data name="&gt;&gt;Notification1.Name" xml:space="preserve">
     <value>Notification1</value>
@@ -362,6 +452,117 @@
   </data>
   <data name="&gt;&gt;SettingsPage.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;BinaryData.Name" xml:space="preserve">
+    <value>BinaryData</value>
+  </data>
+  <data name="&gt;&gt;BinaryData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BinaryData.Parent" xml:space="preserve">
+    <value>AdViewPage</value>
+  </data>
+  <data name="&gt;&gt;BinaryData.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;materialDivider1.Name" xml:space="preserve">
+    <value>materialDivider1</value>
+  </data>
+  <data name="&gt;&gt;materialDivider1.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialDivider, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialDivider1.Parent" xml:space="preserve">
+    <value>AdViewPage</value>
+  </data>
+  <data name="&gt;&gt;materialDivider1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RegistryList.Name" xml:space="preserve">
+    <value>RegistryList</value>
+  </data>
+  <data name="&gt;&gt;RegistryList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RegistryList.Parent" xml:space="preserve">
+    <value>AdViewPage</value>
+  </data>
+  <data name="&gt;&gt;RegistryList.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="AdViewPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 23</value>
+  </data>
+  <data name="AdViewPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>556, 395</value>
+  </data>
+  <data name="AdViewPage.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="AdViewPage.Text" xml:space="preserve">
+    <value>Advanced View</value>
+  </data>
+  <data name="&gt;&gt;AdViewPage.Name" xml:space="preserve">
+    <value>AdViewPage</value>
+  </data>
+  <data name="&gt;&gt;AdViewPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AdViewPage.Parent" xml:space="preserve">
+    <value>TabControl</value>
+  </data>
+  <data name="&gt;&gt;AdViewPage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 90</value>
+  </data>
+  <data name="TabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>564, 422</value>
+  </data>
+  <data name="TabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;TabControl.Name" xml:space="preserve">
+    <value>TabControl</value>
+  </data>
+  <data name="&gt;&gt;TabControl.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialTabControl, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TabControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Notification1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Notification1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 11pt</value>
+  </data>
+  <data name="Notification1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 90</value>
+  </data>
+  <data name="Notification1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 19</value>
+  </data>
+  <data name="Notification1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Notification1.Text" xml:space="preserve">
+    <value>This page is empty ;)</value>
+  </data>
+  <data name="&gt;&gt;Notification1.Name" xml:space="preserve">
+    <value>Notification1</value>
+  </data>
+  <data name="&gt;&gt;Notification1.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialLabel, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Notification1.Parent" xml:space="preserve">
+    <value>SettingsPage</value>
+  </data>
+  <data name="&gt;&gt;Notification1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="BinaryData.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 171</value>
@@ -437,51 +638,6 @@
   </data>
   <data name="&gt;&gt;RegistryList.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="AdViewPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 23</value>
-  </data>
-  <data name="AdViewPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>556, 395</value>
-  </data>
-  <data name="AdViewPage.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="AdViewPage.Text" xml:space="preserve">
-    <value>Advanced View</value>
-  </data>
-  <data name="&gt;&gt;AdViewPage.Name" xml:space="preserve">
-    <value>AdViewPage</value>
-  </data>
-  <data name="&gt;&gt;AdViewPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AdViewPage.Parent" xml:space="preserve">
-    <value>TabControl</value>
-  </data>
-  <data name="&gt;&gt;AdViewPage.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="TabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 90</value>
-  </data>
-  <data name="TabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>564, 422</value>
-  </data>
-  <data name="TabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;TabControl.Name" xml:space="preserve">
-    <value>TabControl</value>
-  </data>
-  <data name="&gt;&gt;TabControl.Type" xml:space="preserve">
-    <value>MaterialSkin.Controls.MaterialTabControl, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TabControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TabControl.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="TabSelector.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
