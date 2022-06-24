@@ -23,8 +23,6 @@ namespace ProfileSwitcher
             profileCount.Text = $"{ProfileList.Items.Count} Profile/s Loaded.";
         }
 
-        private void Switcher_Load(object sender, EventArgs e) { }
-
         private void SaveButton_Click(object sender, EventArgs e)
         {
             var if_ = new InputForm();
@@ -74,8 +72,6 @@ namespace ProfileSwitcher
                 Utility.ReadFromDisk(text).WriteToRegedit();
             }
         }
-
-        private void TabSelector_Click(object sender, EventArgs e) { }
 
         private void RegistryList_SelectedIndexChanged(object sender, EventArgs e)
         {
