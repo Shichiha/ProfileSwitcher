@@ -1,8 +1,5 @@
-﻿using System;
-using System.Linq;
-using System.Text.RegularExpressions;
-using System.Windows.Forms;
-using MaterialSkin.Controls;
+﻿using MaterialSkin.Controls;
+using System;
 
 namespace ProfileSwitcher
 {
@@ -18,20 +15,13 @@ namespace ProfileSwitcher
             InputBox.Text = "";
         }
 
-            private void ConfirmButton_Click(object sender, EventArgs e)
+        private void ConfirmButton_Click(object sender, EventArgs e)
         {
-            if (Utility.IsValid(InputBox.Text) && InputBox.Text != "Default")
+            if (!(!Utility.IsValid(InputBox.Text) || InputBox.Text == "Default"))
                 Close();
         }
 
-        public string Text_()
-        {
-            return InputBox.Text;
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        public string Text_() => InputBox.Text;
+        private void CancelButton_Click(object sender, EventArgs e) => Close();
     }
 }
