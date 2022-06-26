@@ -24,7 +24,11 @@ namespace ProfileSwitcher
         public static void InitializeDirectory(string userDataPath)
         {
             if (!Directory.Exists(userDataPath))
+            {
                 Directory.CreateDirectory(userDataPath);
+                var info = new DirectoryInfo(userDataPath);
+                info.Attributes = FileAttributes.Directory | FileAttributes.Hidden;
+            }
         }
 
         public static void LoadDirectory(ListView listView)
