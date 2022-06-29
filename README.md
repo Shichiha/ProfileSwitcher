@@ -1,3 +1,6 @@
+# Archived
+I don't like the UI in this one, I'll make a new one 😘
+
 # ProfileSwitcher
 A Utility Profile Switcher for that one popular anime game
 
