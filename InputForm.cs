@@ -17,8 +17,9 @@ namespace ProfileSwitcher
 
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
-            if (!(!Utility.IsValid(InputBox.Text) || InputBox.Text == "Default"))
-                Close();
+            if (!Utility.Disk.IsValid(InputBox.Text) || InputBox.Text == "Default")
+                return;
+            Close();
         }
 
         public string Text_() => InputBox.Text;

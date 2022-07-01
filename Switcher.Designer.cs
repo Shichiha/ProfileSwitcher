@@ -42,11 +42,11 @@
             this.SettingsTabSelector = new MaterialSkin.Controls.MaterialTabSelector();
             this.SettingsTabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.ScreenWidth = new System.Windows.Forms.TextBox();
-            this.ScreenHeight = new System.Windows.Forms.TextBox();
             this.FullscreenToggle = new MaterialSkin.Controls.MaterialCheckBox();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.ScreenHeight = new System.Windows.Forms.TextBox();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.AdViewPage = new System.Windows.Forms.TabPage();
             this.BinaryData = new System.Windows.Forms.RichTextBox();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
@@ -71,6 +71,7 @@
             this.ProfileList.Name = "ProfileList";
             this.ProfileList.UseCompatibleStateImageBehavior = false;
             this.ProfileList.View = System.Windows.Forms.View.List;
+            this.ProfileList.SelectedIndexChanged += new System.EventHandler(this.ProfileList_SelectedIndexChanged);
             // 
             // SaveButton
             // 
@@ -202,35 +203,12 @@
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // materialLabel2
-            // 
-            resources.ApplyResources(this.materialLabel2, "materialLabel2");
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            // 
-            // materialLabel1
-            // 
-            resources.ApplyResources(this.materialLabel1, "materialLabel1");
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            // 
             // ScreenWidth
             // 
             this.ScreenWidth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.ScreenWidth, "ScreenWidth");
             this.ScreenWidth.Name = "ScreenWidth";
             this.ScreenWidth.TextChanged += new System.EventHandler(this.ScreenWidth_TextChanged);
-            // 
-            // ScreenHeight
-            // 
-            this.ScreenHeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.ScreenHeight, "ScreenHeight");
-            this.ScreenHeight.Name = "ScreenHeight";
-            this.ScreenHeight.TextChanged += new System.EventHandler(this.ScreenHeight_TextChanged);
             // 
             // FullscreenToggle
             // 
@@ -242,6 +220,29 @@
             this.FullscreenToggle.Ripple = true;
             this.FullscreenToggle.UseVisualStyleBackColor = true;
             this.FullscreenToggle.CheckedChanged += new System.EventHandler(this.FullscreenToggle_CheckedChanged);
+            // 
+            // materialLabel2
+            // 
+            resources.ApplyResources(this.materialLabel2, "materialLabel2");
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            // 
+            // ScreenHeight
+            // 
+            this.ScreenHeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.ScreenHeight, "ScreenHeight");
+            this.ScreenHeight.Name = "ScreenHeight";
+            this.ScreenHeight.TextChanged += new System.EventHandler(this.ScreenHeight_TextChanged);
+            // 
+            // materialLabel1
+            // 
+            resources.ApplyResources(this.materialLabel1, "materialLabel1");
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
             // 
             // AdViewPage
             // 
@@ -269,11 +270,11 @@
             // 
             // RegistryList
             // 
+            resources.ApplyResources(this.RegistryList, "RegistryList");
             this.RegistryList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.RegistryList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.RegistryList.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.RegistryList.HideSelection = false;
-            resources.ApplyResources(this.RegistryList, "RegistryList");
             this.RegistryList.MultiSelect = false;
             this.RegistryList.Name = "RegistryList";
             this.RegistryList.UseCompatibleStateImageBehavior = false;
