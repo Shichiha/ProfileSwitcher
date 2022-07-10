@@ -1,11 +1,15 @@
-﻿namespace ProfileSwitcher
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+using MaterialSkin.Controls;
+
+namespace ProfileSwitcher
 {
     partial class Switcher
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -71,7 +75,6 @@
             this.ProfileList.Name = "ProfileList";
             this.ProfileList.UseCompatibleStateImageBehavior = false;
             this.ProfileList.View = System.Windows.Forms.View.List;
-            this.ProfileList.SelectedIndexChanged += new System.EventHandler(this.ProfileList_SelectedIndexChanged);
             // 
             // SaveButton
             // 
@@ -317,30 +320,30 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView ProfileList;
-        private MaterialSkin.Controls.MaterialFlatButton SaveButton;
-        private MaterialSkin.Controls.MaterialFlatButton LoadButton;
-        private MaterialSkin.Controls.MaterialTabControl TabControl;
-        private System.Windows.Forms.TabPage MainPage;
-        private System.Windows.Forms.TabPage SettingsPage;
-        private MaterialSkin.Controls.MaterialTabSelector TabSelector;
-        private System.Windows.Forms.TabPage AdViewPage;
-        private System.Windows.Forms.ListView RegistryList;
-        private MaterialSkin.Controls.MaterialDivider materialDivider1;
-        private System.Windows.Forms.RichTextBox BinaryData;
-        private MaterialSkin.Controls.MaterialLabel versionCount;
-        private MaterialSkin.Controls.MaterialLabel profileCount;
-        private MaterialSkin.Controls.MaterialFlatButton DeleteButton;
-        private MaterialSkin.Controls.MaterialFlatButton RenameButton;
-        private MaterialSkin.Controls.MaterialFlatButton OpenFolderButton;
-        private MaterialSkin.Controls.MaterialCheckBox FullscreenToggle;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private System.Windows.Forms.TextBox ScreenWidth;
-        private System.Windows.Forms.TextBox ScreenHeight;
-        private MaterialSkin.Controls.MaterialTabSelector SettingsTabSelector;
-        private MaterialSkin.Controls.MaterialTabControl SettingsTabControl;
-        private System.Windows.Forms.TabPage tabPage1;
+        private ListView ProfileList;
+        private MaterialFlatButton SaveButton;
+        private MaterialFlatButton LoadButton;
+        private MaterialTabControl TabControl;
+        private TabPage MainPage;
+        private TabPage SettingsPage;
+        private MaterialTabSelector TabSelector;
+        private TabPage AdViewPage;
+        private ListView RegistryList;
+        private MaterialDivider materialDivider1;
+        private RichTextBox BinaryData;
+        private MaterialLabel versionCount;
+        private MaterialLabel profileCount;
+        private MaterialFlatButton DeleteButton;
+        private MaterialFlatButton RenameButton;
+        private MaterialFlatButton OpenFolderButton;
+        private MaterialCheckBox FullscreenToggle;
+        private MaterialLabel materialLabel2;
+        private MaterialLabel materialLabel1;
+        private TextBox ScreenWidth;
+        private TextBox ScreenHeight;
+        private MaterialTabSelector SettingsTabSelector;
+        private MaterialTabControl SettingsTabControl;
+        private TabPage tabPage1;
     }
 }
 

@@ -1,11 +1,16 @@
-﻿using System.Windows.Forms;
-using Microsoft.Win32;
+﻿using System;
 using System.Text;
-using System;
+using System.Windows.Forms;
+using Microsoft.Win32;
+
 namespace ProfileSwitcher.Utility
 {
     internal class Registries
     {
+        // Making it clear that there's no support for China Genshin yet
+        private static bool Exists(string name) => Registry.CurrentUser.OpenSubKey($"Software\\miHoYo\\{name}") != null;
+        public static bool IsOversea() => Exists(@"Genshin Impact");
+
         public static string GetStringFromRegedit(string key, bool forceStringFromByteArray = true)
         {
             var value = Registry.GetValue(Constants.genshinRegPath, key, "");
@@ -16,14 +21,9 @@ namespace ProfileSwitcher.Utility
             return value.ToString();
         }
 
-        public static void SetRegeditKey(string key, string value)
+        private static void SetRegeditKey(string key, string value)
         {
             Registry.SetValue(Constants.genshinRegPath, key, Encoding.UTF8.GetBytes(value));
-        }
-
-        public static void SetRegeditKey(string key, byte[] value)
-        {
-            Registry.SetValue(Constants.genshinRegPath, key, value);
         }
 
         public static void SetRegeditKey(string key, int value)
@@ -33,8 +33,8 @@ namespace ProfileSwitcher.Utility
 
         public static Array GetKeyArray()
         {
-            RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\miHoYo\\Genshin Impact");
-            return key.GetValueNames();
+            var key = Registry.CurrentUser.OpenSubKey("Software\\miHoYo\\Genshin Impact");
+            return key?.GetValueNames();
         }
 
         public static void ArrayToList(ListView list, Array array)
@@ -57,17 +57,16 @@ namespace ProfileSwitcher.Utility
                     "MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810",
                     usDt.AccountDataList
                 );
-                MessageBox.Show("Switch Success!");
+                MessageBox.Show(@"Switch Success!");
             }
             else
             {
                 MessageBox.Show(
-                    "Account not found",
-                    "Account Manager",
+                    @"Account not found",
+                    @"Account Manager",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Hand
                 );
-                return;
             }
         }
     }

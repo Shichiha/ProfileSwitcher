@@ -1,11 +1,14 @@
-﻿namespace ProfileSwitcher
+﻿using System.ComponentModel;
+using MaterialSkin.Controls;
+
+namespace ProfileSwitcher
 {
     partial class InputForm
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -133,9 +136,9 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialSingleLineTextField InputBox;
-        private MaterialSkin.Controls.MaterialFlatButton ConfirmButton;
-        private MaterialSkin.Controls.MaterialFlatButton CancelButton;
-        private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private MaterialSingleLineTextField InputBox;
+        private MaterialFlatButton ConfirmButton;
+        private new MaterialFlatButton CancelButton;
+        private MaterialDivider materialDivider1;
     }
 }

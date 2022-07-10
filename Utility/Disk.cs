@@ -1,8 +1,8 @@
-﻿using System.Web.Script.Serialization;
-using System.Text.RegularExpressions;
-using System.Windows.Forms;
+﻿using System.IO;
 using System.Linq;
-using System.IO;
+using System.Text.RegularExpressions;
+using System.Web.Script.Serialization;
+using System.Windows.Forms;
 
 namespace ProfileSwitcher.Utility
 {
@@ -64,7 +64,7 @@ namespace ProfileSwitcher.Utility
                 return false;
             if (Regex.IsMatch(text, @"[<>:""/\\|?*]"))
                 return false;
-            var reservedNames = new string[]
+            var reservedNames = new[]
             {
                 "con",
                 "nul",

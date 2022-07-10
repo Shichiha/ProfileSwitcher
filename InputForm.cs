@@ -1,5 +1,6 @@
-﻿using MaterialSkin.Controls;
-using System;
+﻿using System;
+using MaterialSkin.Controls;
+using ProfileSwitcher.Utility;
 
 namespace ProfileSwitcher
 {
@@ -17,7 +18,7 @@ namespace ProfileSwitcher
 
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
-            if (!Utility.Disk.IsValid(InputBox.Text) || InputBox.Text == "Default")
+            if (!Disk.IsValid(InputBox.Text) || InputBox.Text == "Default")
                 return;
             Close();
         }
