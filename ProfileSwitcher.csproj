@@ -71,8 +71,14 @@
     <Compile Include="Utility\Process.cs" />
     <Compile Include="Utility\Registries.cs" />
     <Compile Include="Utility\Constants.cs" />
+    <EmbeddedResource Include="InputForm.en.resx">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InputForm.resx">
       <DependentUpon>InputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en.resx">
+      <DependentUpon>Resources.resx</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Switcher.en.resx">
       <DependentUpon>Switcher.cs</DependentUpon>

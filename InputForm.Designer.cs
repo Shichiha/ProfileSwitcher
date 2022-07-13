@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using MaterialSkin.Controls;
+using ProfileSwitcher.Properties;
 
 namespace ProfileSwitcher
 {
@@ -54,7 +55,7 @@ namespace ProfileSwitcher
             this.InputBox.SelectionStart = 0;
             this.InputBox.Size = new System.Drawing.Size(295, 23);
             this.InputBox.TabIndex = 0;
-            this.InputBox.Text = "Default";
+            this.InputBox.Text = Resources.Default;
             this.InputBox.UseSystemPasswordChar = false;
             this.InputBox.Click += new System.EventHandler(this.InputBox_Click);
             // 

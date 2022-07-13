@@ -37,10 +37,10 @@ namespace ProfileSwitcher.Utility
             return new JavaScriptSerializer().Deserialize<UserData>(input);
         }
 
-        public static void WriteToDisk(string Name)
+        public static void WriteToDisk(string name)
         {
             File.WriteAllText(
-                Path.Combine(Application.StartupPath, "UserData", Name),
+                Path.Combine(Application.StartupPath, "UserData", name),
                 new JavaScriptSerializer().Serialize(Registries.ReadFromRegedit())
             );
         }
@@ -48,11 +48,11 @@ namespace ProfileSwitcher.Utility
         public static void DeleteFromDisk(string name) =>
             File.Delete(Path.Combine(Application.StartupPath, "UserData", name));
 
-        public static void RenameFromDisk(string name, string NewName)
+        public static void RenameFromDisk(string name, string newName)
         {
             File.Move(
                 Path.Combine(Application.StartupPath, "UserData", name),
-                Path.Combine(Application.StartupPath, "UserData", NewName)
+                Path.Combine(Application.StartupPath, "UserData", newName)
             );
         }
 

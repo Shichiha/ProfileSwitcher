@@ -27,7 +27,8 @@ namespace ProfileSwitcher
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -46,6 +47,7 @@ namespace ProfileSwitcher
             this.SettingsTabSelector = new MaterialSkin.Controls.MaterialTabSelector();
             this.SettingsTabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.MakeDemoWindow = new MaterialSkin.Controls.MaterialFlatButton();
             this.ScreenWidth = new System.Windows.Forms.TextBox();
             this.FullscreenToggle = new MaterialSkin.Controls.MaterialCheckBox();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
@@ -55,6 +57,8 @@ namespace ProfileSwitcher
             this.BinaryData = new System.Windows.Forms.RichTextBox();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.RegistryList = new System.Windows.Forms.ListView();
+            this.DetailsPage = new System.Windows.Forms.TabPage();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.TabSelector = new MaterialSkin.Controls.MaterialTabSelector();
             this.TabControl.SuspendLayout();
             this.MainPage.SuspendLayout();
@@ -62,6 +66,7 @@ namespace ProfileSwitcher
             this.SettingsTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.AdViewPage.SuspendLayout();
+            this.DetailsPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // ProfileList
@@ -101,6 +106,7 @@ namespace ProfileSwitcher
             this.TabControl.Controls.Add(this.MainPage);
             this.TabControl.Controls.Add(this.SettingsPage);
             this.TabControl.Controls.Add(this.AdViewPage);
+            this.TabControl.Controls.Add(this.DetailsPage);
             this.TabControl.Cursor = System.Windows.Forms.Cursors.Default;
             this.TabControl.Depth = 0;
             resources.ApplyResources(this.TabControl, "TabControl");
@@ -197,6 +203,7 @@ namespace ProfileSwitcher
             // tabPage1
             // 
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage1.Controls.Add(this.MakeDemoWindow);
             this.tabPage1.Controls.Add(this.ScreenWidth);
             this.tabPage1.Controls.Add(this.FullscreenToggle);
             this.tabPage1.Controls.Add(this.materialLabel2);
@@ -205,6 +212,16 @@ namespace ProfileSwitcher
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // MakeDemoWindow
+            // 
+            resources.ApplyResources(this.MakeDemoWindow, "MakeDemoWindow");
+            this.MakeDemoWindow.Depth = 0;
+            this.MakeDemoWindow.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MakeDemoWindow.Name = "MakeDemoWindow";
+            this.MakeDemoWindow.Primary = false;
+            this.MakeDemoWindow.UseVisualStyleBackColor = true;
+            this.MakeDemoWindow.Click += new System.EventHandler(this.MakeDemoWindow_Click);
             // 
             // ScreenWidth
             // 
@@ -284,6 +301,21 @@ namespace ProfileSwitcher
             this.RegistryList.View = System.Windows.Forms.View.List;
             this.RegistryList.SelectedIndexChanged += new System.EventHandler(this.RegistryList_SelectedIndexChanged);
             // 
+            // DetailsPage
+            // 
+            this.DetailsPage.Controls.Add(this.materialLabel3);
+            resources.ApplyResources(this.DetailsPage, "DetailsPage");
+            this.DetailsPage.Name = "DetailsPage";
+            this.DetailsPage.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.Depth = 0;
+            resources.ApplyResources(this.materialLabel3, "materialLabel3");
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            // 
             // TabSelector
             // 
             resources.ApplyResources(this.TabSelector, "TabSelector");
@@ -314,16 +346,22 @@ namespace ProfileSwitcher
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.AdViewPage.ResumeLayout(false);
+            this.DetailsPage.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
+
+        private MaterialSkin.Controls.MaterialFlatButton MakeDemoWindow;
+
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+
+        private System.Windows.Forms.TabPage DetailsPage;
 
         #endregion
 
         private ListView ProfileList;
         private MaterialFlatButton SaveButton;
         private MaterialFlatButton LoadButton;
-        private MaterialTabControl TabControl;
+        private MaterialSkin.Controls.MaterialTabControl TabControl;
         private TabPage MainPage;
         private TabPage SettingsPage;
         private MaterialTabSelector TabSelector;
@@ -339,11 +377,11 @@ namespace ProfileSwitcher
         private MaterialCheckBox FullscreenToggle;
         private MaterialLabel materialLabel2;
         private MaterialLabel materialLabel1;
-        private TextBox ScreenWidth;
+        private System.Windows.Forms.TextBox ScreenWidth;
         private TextBox ScreenHeight;
         private MaterialTabSelector SettingsTabSelector;
         private MaterialTabControl SettingsTabControl;
-        private TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }
 

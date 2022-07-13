@@ -411,6 +411,39 @@
   <data name="&gt;&gt;MainPage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="MakeDemoWindow.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MakeDemoWindow.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="MakeDemoWindow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 116</value>
+  </data>
+  <data name="MakeDemoWindow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 6, 4, 6</value>
+  </data>
+  <data name="MakeDemoWindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 36</value>
+  </data>
+  <data name="MakeDemoWindow.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="MakeDemoWindow.Text" xml:space="preserve">
+    <value>Make Demo Window</value>
+  </data>
+  <data name="&gt;&gt;MakeDemoWindow.Name" xml:space="preserve">
+    <value>MakeDemoWindow</value>
+  </data>
+  <data name="&gt;&gt;MakeDemoWindow.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialFlatButton, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;MakeDemoWindow.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;MakeDemoWindow.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="ScreenWidth.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 85</value>
   </data>
@@ -433,7 +466,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;ScreenWidth.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="FullscreenToggle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -466,7 +499,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;FullscreenToggle.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="materialLabel2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -499,7 +532,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;materialLabel2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="ScreenHeight.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 47</value>
@@ -523,7 +556,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;ScreenHeight.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="materialLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -553,7 +586,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;materialLabel1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="tabPage1.Font" type="System.Drawing.Font, System.Drawing">
     <value>JetBrains Mono, 8.249999pt</value>
@@ -770,6 +803,57 @@
   </data>
   <data name="&gt;&gt;AdViewPage.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="materialLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 11pt</value>
+  </data>
+  <data name="materialLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>161, 137</value>
+  </data>
+  <data name="materialLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 23</value>
+  </data>
+  <data name="materialLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="materialLabel3.Text" xml:space="preserve">
+    <value>Nothing Here yet~</value>
+  </data>
+  <data name="&gt;&gt;materialLabel3.Name" xml:space="preserve">
+    <value>materialLabel3</value>
+  </data>
+  <data name="&gt;&gt;materialLabel3.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialLabel, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;materialLabel3.Parent" xml:space="preserve">
+    <value>DetailsPage</value>
+  </data>
+  <data name="&gt;&gt;materialLabel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="DetailsPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 23</value>
+  </data>
+  <data name="DetailsPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>472, 311</value>
+  </data>
+  <data name="DetailsPage.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="DetailsPage.Text" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="&gt;&gt;DetailsPage.Name" xml:space="preserve">
+    <value>DetailsPage</value>
+  </data>
+  <data name="&gt;&gt;DetailsPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DetailsPage.Parent" xml:space="preserve">
+    <value>TabControl</value>
+  </data>
+  <data name="&gt;&gt;DetailsPage.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="TabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>

@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using ProfileSwitcher.Properties;
 using ProfileSwitcher.Utility;
+using static System.Int32;
 
 namespace ProfileSwitcher
 {
@@ -21,8 +24,10 @@ namespace ProfileSwitcher
             Disk.InitializeDirectory(Constants.UserDataFolder);
             Registries.ArrayToList(RegistryList, Registries.GetKeyArray());
             Disk.LoadDirectory(ProfileList);
+
             versionCount.Text = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            profileCount.Text = $@"{ProfileList.Items.Count} Profile/s Loaded.";
+            profileCount.Text = string.Format(Resources.ProfilesLoaded, ProfileList.Items.Count);
+
             FullscreenToggle.Checked =
                 Registries.GetStringFromRegedit("Screenmanager Is Fullscreen mode_h3981298716") == "1";
             ScreenHeight.Text = Registries.GetStringFromRegedit("Screenmanager Resolution Height_h2627697771");
@@ -32,34 +37,38 @@ namespace ProfileSwitcher
         private void SaveButton_Click(object sender, EventArgs e)
         {
             var inputForm = new InputForm();
-            inputForm.Text = @"Name the Profile";
+            inputForm.Text = Resources.NameTheProfile;
             inputForm.ShowDialog();
             if (Disk.IsValid(inputForm.Text_()))
             {
-                UserData usDt = new UserData();
+                var usDt = new UserData
+                {
+                    AccountName = null,
+                    AccountDataList = null
+                };
                 usDt.AccountName = inputForm.Text_();
                 Disk.WriteToDisk(usDt.AccountName);
             }
             else
-                MessageBox.Show(@"Invalid Text");
+                MessageBox.Show(Resources.InvalidText);
 
             Disk.LoadUserDataToList(ProfileList);
-            profileCount.Text = $@"{ProfileList.Items.Count} Profile/s Loaded.";
+            profileCount.Text = string.Format(Resources.ProfilesLoaded, ProfileList.Items.Count);
         }
 
         private void LoadButton_Click(object sender, EventArgs e)
         {
             if (ProfileList.Items.Count <= 0)
             {
-                MessageBox.Show(@"No Accounts Loaded");
+                MessageBox.Show(Resources.NoAccountsLoaded);
                 return;
             }
 
             if (ProfileList.SelectedItems.Count == 0)
             {
                 MessageBox.Show(
-                    "Please select account",
-                    "Account Manager",
+                    Resources.SelectAccount,
+                    Resources.Account,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Asterisk
                 );
@@ -71,8 +80,8 @@ namespace ProfileSwitcher
             if (string.IsNullOrEmpty(text))
             {
                 MessageBox.Show(
-                    "Please select account",
-                    "Account Manager",
+                    Resources.SelectAccount,
+                    Resources.Account,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Asterisk
                 );
@@ -82,8 +91,8 @@ namespace ProfileSwitcher
             if (Utils.PopularAnimeGameIsRunning())
             {
                 MessageBox.Show(
-                    "Close the game before switching accounts",
-                    "Account Manager",
+                    Resources.GameOpenError,
+                    Resources.Account,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation
                 );
@@ -93,8 +102,8 @@ namespace ProfileSwitcher
 
             if (
                 MessageBox.Show(
-                    $"Switch to [{text}]",
-                    "Account Manager",
+                    string.Format(Resources.SwitchTo, text),
+                    Resources.Account,
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question
                 ) == DialogResult.Yes
@@ -110,10 +119,10 @@ namespace ProfileSwitcher
             if (RegistryList.SelectedItems.Count > 0)
             {
                 string selected = RegistryList.SelectedItems[0].Text;
-                string BinaryData_ = Registries.GetStringFromRegedit(selected);
+                string binaryData = Registries.GetStringFromRegedit(selected);
                 if (BinaryData == null)
-                    MessageBox.Show(@"BinaryData is Null");
-                BinaryData.Text = BinaryData_;
+                    MessageBox.Show(Resources.BinaryDataNull);
+                if (BinaryData != null) BinaryData.Text = binaryData;
             }
         }
 
@@ -121,15 +130,15 @@ namespace ProfileSwitcher
         {
             if (ProfileList.Items.Count <= 0)
             {
-                MessageBox.Show(@"No Accounts Loaded");
+                MessageBox.Show(Resources.NoAccountsLoaded);
                 return;
             }
 
             if (ProfileList.SelectedItems.Count == 0)
             {
                 MessageBox.Show(
-                    "Please select account",
-                    "Account Manager",
+                    Resources.SelectAccount,
+                    Resources.Account,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Asterisk
                 );
@@ -140,8 +149,8 @@ namespace ProfileSwitcher
             if (string.IsNullOrEmpty(text))
             {
                 MessageBox.Show(
-                    "Please select account",
-                    "Account Manager",
+                    Resources.SelectAccount,
+                    Resources.Account,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Asterisk
                 );
@@ -152,8 +161,8 @@ namespace ProfileSwitcher
             {
                 // Just In Case!
                 MessageBox.Show(
-                    "Close the game before Deleting accounts",
-                    "Account Manager",
+                    Resources.GameOpenError2,
+                    Resources.Account,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation
                 );
@@ -162,8 +171,8 @@ namespace ProfileSwitcher
 
             if (
                 MessageBox.Show(
-                    $"Delete [{text}]",
-                    "Account Manager",
+                    string.Format(Resources.Delete, text),
+                    Resources.Account,
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question
                 ) == DialogResult.Yes
@@ -171,7 +180,7 @@ namespace ProfileSwitcher
             {
                 Disk.DeleteFromDisk(text);
                 Disk.LoadUserDataToList(ProfileList);
-                profileCount.Text = $"{ProfileList.Items.Count} Profile/s Loaded.";
+                profileCount.Text = string.Format(Resources.ProfilesLoaded, ProfileList.Items.Count);
             }
         }
 
@@ -179,15 +188,15 @@ namespace ProfileSwitcher
         {
             if (ProfileList.Items.Count <= 0)
             {
-                MessageBox.Show(@"No Accounts Loaded");
+                MessageBox.Show(Resources.NoAccountsLoaded);
                 return;
             }
 
             if (ProfileList.SelectedItems.Count == 0)
             {
                 MessageBox.Show(
-                    "Please select account",
-                    "Account Manager",
+                    Resources.SelectAccount,
+                    Resources.Account,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Asterisk
                 );
@@ -199,8 +208,8 @@ namespace ProfileSwitcher
             if (string.IsNullOrEmpty(text))
             {
                 MessageBox.Show(
-                    "Please select account",
-                    "Account Manager",
+                    Resources.SelectAccount,
+                    Resources.Account,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Asterisk
                 );
@@ -208,16 +217,16 @@ namespace ProfileSwitcher
             }
 
             var inpForm = new InputForm();
-            inpForm.Text = "Rename the Profile";
+            inpForm.Text = Resources.Rename;
             inpForm.ShowDialog();
 
             if (!Disk.IsValid(inpForm.Text_()))
-                MessageBox.Show(@"Invalid Text");
+                MessageBox.Show(Resources.InvalidText);
             else
             {
                 Disk.RenameFromDisk(text, inpForm.Text_());
                 Disk.LoadUserDataToList(ProfileList);
-                profileCount.Text = $"{ProfileList.Items.Count} Profile/s Loaded.";
+                profileCount.Text = string.Format(Resources.ProfilesLoaded, ProfileList.Items.Count);
             }
         }
 
@@ -233,27 +242,36 @@ namespace ProfileSwitcher
 
         private void ScreenWidth_TextChanged(object sender, EventArgs e)
         {
-            if (int.Parse(ScreenWidth.Text) < 0 || int.Parse(ScreenWidth.Text) > 3840)
+            if (string.IsNullOrEmpty(ScreenHeight.Text))
+                return;
+            if (Parse(ScreenWidth.Text) < 0 || Parse(ScreenWidth.Text) > 3840)
             {
-                MessageBox.Show(@"Invalid Width");
-                ScreenWidth.Text = "1920";
+                MessageBox.Show(Resources.InvalidWidth);
+                ScreenWidth.Text = @"1920";
             }
             else
-                Registries.SetRegeditKey("Screenmanager Resolution Width_h182942802", int.Parse(ScreenWidth.Text));
+                Registries.SetRegeditKey("Screenmanager Resolution Width_h182942802", Parse(ScreenWidth.Text));
         }
 
         private void ScreenHeight_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(ScreenHeight.Text))
                 return;
-            // If it's text
-            if (int.Parse(ScreenHeight.Text) < 0 || int.Parse(ScreenHeight.Text) > 2160)
+            if (Parse(ScreenHeight.Text) < 0 || Parse(ScreenHeight.Text) > 2160)
             {
-                MessageBox.Show(@"Invalid Height");
-                ScreenHeight.Text = "1080";
+                MessageBox.Show(Resources.InvalidHeight);
+                ScreenHeight.Text = @"1080";
             }
             else
-                Registries.SetRegeditKey("Screenmanager Resolution Height_h182942802", int.Parse(ScreenHeight.Text));
+                Registries.SetRegeditKey("Screenmanager Resolution Height_h2627697771", Parse(ScreenHeight.Text));
+        }
+
+        private void MakeDemoWindow_Click(object sender, EventArgs e)
+        {
+            var f = new Form();
+            f.Size = new Size(Convert.ToInt32(ScreenWidth.Text), Convert.ToInt32(ScreenHeight.Text));
+            f.FormBorderStyle = FormBorderStyle.FixedSingle;
+            f.Show();
         }
     }
 }
