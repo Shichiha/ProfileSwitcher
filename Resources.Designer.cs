@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProfileSwitcher.Properties {
+namespace ProfileSwitcher {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ProfileSwitcher.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ProfileSwitcher.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ProfileSwitcher.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,12 +61,29 @@ namespace ProfileSwitcher.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to A cocount.
         /// </summary>
-        internal static System.Drawing.Bitmap _5uaqzc8_icon_5 {
+        internal static string Account {
             get {
-                object obj = ResourceManager.GetObject("5uaqzc8_icon-5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("Account", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to I dont see this account :/.
+        /// </summary>
+        internal static string AccountNotFound {
+            get {
+                return ResourceManager.GetString("AccountNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Switchd.
+        /// </summary>
+        internal static string SwitchSuccess {
+            get {
+                return ResourceManager.GetString("SwitchSuccess", resourceCulture);
             }
         }
     }

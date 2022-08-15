@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfileSwitcher", "ProfileSwitcher.csproj", "{47C7EE88-D091-48A7-95B3-7A610C114DA5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfileSwitcher", "ProfileSwitcher.csproj", "{A31D1AB5-3DDF-452A-9A39-F48ACC2D57B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{47C7EE88-D091-48A7-95B3-7A610C114DA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{47C7EE88-D091-48A7-95B3-7A610C114DA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{47C7EE88-D091-48A7-95B3-7A610C114DA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{47C7EE88-D091-48A7-95B3-7A610C114DA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A31D1AB5-3DDF-452A-9A39-F48ACC2D57B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A31D1AB5-3DDF-452A-9A39-F48ACC2D57B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A31D1AB5-3DDF-452A-9A39-F48ACC2D57B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A31D1AB5-3DDF-452A-9A39-F48ACC2D57B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F4DD26B3-EA27-4C6A-BCE4-65834B4DD584}
+		SolutionGuid = {C574AE26-B7A9-4C9D-9BBD-E544ED3263EC}
 	EndGlobalSection
 EndGlobal
