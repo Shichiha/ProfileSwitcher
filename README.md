@@ -4,7 +4,7 @@ Doesn't Support the China Genshin (I don't have a Copy), Supports OverSea
 
 # ProfileSwitcher
 
-A Utility Profile Switcher for that one popular anime game
+A Utility Account Switcher for that one popular anime game
 
 # Features
 
